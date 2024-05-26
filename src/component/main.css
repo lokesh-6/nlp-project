@@ -1,0 +1,71 @@
+.button-65 {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #6200ea;
+  border-radius: 12px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px, rgba(0, 0, 0, 0.1) 0 2px 4px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Inter', -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  outline: none;
+  overflow: hidden;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-65::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
+}
+
+.button-65:hover::before {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.button-65:hover {
+  background-color: #3700b3;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 6px 12px, rgba(0, 0, 0, 0.2) 0 3px 6px;
+  color: #fff;
+}
+
+.button-65:active {
+  background-color: #30009c;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.2) 0 1px 2px;
+  transform: translateY(2px);
+}
+
+.button-65:active::before {
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .button-65 {
+    padding: 14px 28px;
+    width: auto;
+  }
+}
